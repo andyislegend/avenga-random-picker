@@ -58,7 +58,7 @@
                 <version>2.0.16</version>
                 <configuration>
                     <appName>avenga-random-picker</appName>
-                    <processTypes><web>java $JAVA_OPTS -jar target/*.jar</web></processTypes>
+                    <processTypes><web>java $JAVA_OPTS -Dserver.port=$PORT -jar target/*.jar</web></processTypes>
                 </configuration>
             </plugin>
 
