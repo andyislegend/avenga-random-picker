@@ -193,12 +193,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     Licensed under the Apache License, Version 2.0 (the "License"); you may not use
     this file except in compliance with the License. You may obtain a copy of the
     License at http://www.apache.org/licenses/LICENSE-2.0
-    
+
     THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
     KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
     WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
     MERCHANTABLITY OR NON-INFRINGEMENT.
-    
+
     See the Apache Version 2.0 License for specific language governing permissions
     and limitations under the License.
     ***************************************************************************** */
@@ -721,6 +721,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var random_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! random-js */
+    "./node_modules/random-js/dist/random-js.esm.js");
 
     var AppComponent =
     /*#__PURE__*/
@@ -733,6 +739,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.link = "";
         this.results = [];
         this.regex = new RegExp(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi);
+        this.randomEngine = new random_js__WEBPACK_IMPORTED_MODULE_3__["Random"](random_js__WEBPACK_IMPORTED_MODULE_3__["MersenneTwister19937"].seed(947570572));
       }
 
       _createClass(AppComponent, [{
@@ -752,9 +759,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return e.trim().length !== 0;
           });
 
-          if (this.parsedInput.length != 0) {
-            var index = Math.floor(Math.random() * this.parsedInput.length);
-            var picked = this.parsedInput[index];
+          if (this.parsedInput.length !== 0) {
+            var next = this.randomEngine.integer(0, this.parsedInput.length - 1);
+            var picked = this.parsedInput[next];
             this.input = this.input.replace(new RegExp(picked + '[\\s,]*'), '');
             this.results.push(picked);
           }
@@ -1019,6 +1026,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     module.exports = __webpack_require__(
     /*! C:\Users\vonopko\Desktop\random\src\main.ts */
     "./src/main.ts");
+    /***/
+  },
+
+  /***/
+  1:
+  /*!************************!*\
+    !*** crypto (ignored) ***!
+    \************************/
+
+  /*! no static exports found */
+
+  /***/
+  function _(module, exports) {
+    /* (ignored) */
+
     /***/
   }
 }, [[0, "runtime", "vendor"]]]);

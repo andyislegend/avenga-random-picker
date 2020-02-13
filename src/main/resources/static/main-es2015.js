@@ -321,6 +321,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var random_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! random-js */ "./node_modules/random-js/dist/random-js.esm.js");
+
 
 
 
@@ -331,6 +333,7 @@ let AppComponent = class AppComponent {
         this.link = "";
         this.results = [];
         this.regex = new RegExp(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi);
+        this.randomEngine = new random_js__WEBPACK_IMPORTED_MODULE_3__["Random"](random_js__WEBPACK_IMPORTED_MODULE_3__["MersenneTwister19937"].seed(947570572));
     }
     ngOnInit() {
     }
@@ -347,8 +350,8 @@ let AppComponent = class AppComponent {
             return e.trim().length !== 0;
         });
         if (this.parsedInput.length != 0) {
-            let index = Math.floor(Math.random() * (this.parsedInput.length));
-            let picked = this.parsedInput[index];
+            var next = this.randomEngine.integer(0, this.parsedInput.length - 1);
+            let picked = this.parsedInput[next];
             this.input = this.input.replace(new RegExp(picked + '[\\s,]*'), '');
             this.results.push(picked);
         }
@@ -508,6 +511,17 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__["platformB
 
 module.exports = __webpack_require__(/*! C:\Users\vonopko\Desktop\random\src\main.ts */"./src/main.ts");
 
+
+/***/ }),
+
+/***/ 1:
+/*!************************!*\
+  !*** crypto (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ })
 
