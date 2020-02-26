@@ -1,5 +1,7 @@
 package avenga.random.service;
 
+import avenga.random.properties.GoogleCredentialProperties;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.javanet.NetHttpTransport;
@@ -11,6 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.Collections;
@@ -20,16 +23,16 @@ import java.util.stream.Collectors;
 
 @Service
 public class SheetsService {
-    public static final String SERVICE_CREDENTIALS = "/service-keys.json";
-
     private final String applicationName;
 
     private NetHttpTransport netHttpTransport;
     private JacksonFactory jacksonFactory;
     private GoogleCredential googleCredential;
+    private GoogleCredentialProperties credentialProperties;
 
-    public SheetsService(@Value("${google.app-name}") String applicationName) {
+    public SheetsService(@Value("${google.app-name}") String applicationName, GoogleCredentialProperties credentialProperties) {
         this.applicationName = applicationName;
+        this.credentialProperties = credentialProperties;
     }
 
     @PostConstruct
@@ -56,7 +59,11 @@ public class SheetsService {
     }
 
     private GoogleCredential buildServiceCredential() throws IOException {
-        return GoogleCredential.fromStream(this.getClass().getResourceAsStream(SERVICE_CREDENTIALS))
+        var credentials = new ObjectMapper()
+                .writeValueAsString(credentialProperties)
+                .replace("\\\\", "\\");
+
+        return GoogleCredential.fromStream(new ByteArrayInputStream(credentials.getBytes()))
                 .createScoped(Collections.singletonList(SheetsScopes.SPREADSHEETS_READONLY));
     }
 

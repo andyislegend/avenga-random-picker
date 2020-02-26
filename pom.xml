@@ -12,6 +12,7 @@
 
     <properties>
         <java.version>13</java.version>
+        <google.sheets.api.version>v4-rev607-1.25.0</google.sheets.api.version>
     </properties>
 
     <parent>
@@ -33,7 +34,7 @@
         <dependency>
             <groupId>com.google.apis</groupId>
             <artifactId>google-api-services-sheets</artifactId>
-            <version>v4-rev607-1.25.0</version>
+            <version>${google.sheets.api.version}</version>
         </dependency>
 
         <dependency>
