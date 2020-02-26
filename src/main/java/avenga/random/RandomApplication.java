@@ -9,5 +9,4 @@ public class RandomApplication {
     public static void main(String[] args) {
         SpringApplication.run(RandomApplication.class, args);
     }
-
 }

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "avenga-random-269408",
+  "private_key_id": "9b1b299d3bcf530cae0822b5c329b17a132309fa",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCkN2eJTi5MHeEQ\nkQFlAAVFkCVSC4Fn37tO5bL7bFhlGTSj4Fxby+IQLJjh7u2XXDN1nd8YrI9XfrYq\nLaof2Ezo4Z2k3rZfgTfJdJ4M3il5Th6YzDqI/Uy3mTSe7KuoiDncCD6EFyXfWsES\nN9oCo+MzbhN6SIhri1rLXs+l4eqgug82wtMIG06Bu8EoCFLjmPqVruSeKctXk5d+\ncJ1mMh9ZH/8F+1jHScNK3qSik/TwFnAbPhXvpMVqFEsUGx64CABVImDVu/dx+FUs\nnz9vpDncQxitWlCy0awSVklkRj9tD9HJ1+CHZmAFUgXlRX5DpK1lIkV51yzFkToI\naBYYDXsjAgMBAAECggEAOmsDSBMp4SYX9J7BEj8JoQ+AV0mEhYFPzudj3pFSeNSY\np1ufP4CuMPbMhENM/jVskQDSZqKsc4G+KA8KoD2ATrBENmyMEDmVsPLtbsJxmpex\nxsWQZT9G1WGJGKg1AMVFYAMGylK5xFUyrdp0kc/feWJFR5EaBrgSWpql3+sYXoh/\n+MwUDqRN6q7TORLMrtFcF1h3efVGUElG+4A6bxwHNM3CA5u2SO2i3ACHCHPe6KKc\nr6M8E+qBSwwx9PxPr+KcLrfuEzSPYWJXi6iI1Mgev4skYxGm5D5J0eNw8lppsz4h\nILcHdZ5TxxKJaDSxXPIsTMM4H6aLnTL2mn8mKcdFkQKBgQDU+7JFHhv/VW/FM42b\n/4QKgv3d+w0ZfAqZtlnphcilAdwk7hTm4CBPhkaNahk32qub451Q9+xE4og95eby\nKxxXvev+OkTdEqTXYI+PRLjYMPD2QF6Mu/frC0S1BY0kMkoQVH3yY8diLNw9u5TP\n3PwARA2urMkyescFU40pwrb6fQKBgQDFYjh9/ABbdduyyCllMzT9rl4GrSl5HXHa\nN9XO9jx56huneudTFaeC0LONeFqutzAL86MwMNtiiRynbAVu+wIO3uRft8m8bHCf\nnfxx5MPx00TqKMACiE7DBi0nSq3+VSZK3AR6VNaPRzpqeAYuLKST7ft6VHWIOq+i\nmwJ9YDyeHwKBgDhRvlhMl/ay7vVkpoOj05S8AsmaQ2KDzIHNGIWJ3P7VOROC6YAL\nsD+XMDzg235LkqmMTONGS/IDPSexDZroD3ycOjVlzyPudCyH2i52a7KvbmiPqPDq\nG6rJtgdwSlxR+AfNb+iSvfyWBD9GxRkaRIEFfeC8zA9PLCWabG+oj545AoGAFpIC\nr7VPPSYe9zSYNzBB0PhNXCoU4fqR+EgGNOJHTBGPE/mj1gZV30mKHpUymWPtJJC5\nilsr2vqewi5B+MzPEXA/YQqdEOS9hCMGqOdl2JM2ACikvCVmDDr6ktGhT8Hg3RKH\nmI12829LqL0Mx97m+ttttDFQN0Gur8NV54xHojUCgYEAuETrLA1sDhB6oYQ139y4\nM6mIWm/ofW76VZqXvvOQmFv5BdH1f6a9sZNs44XDdwdbFaTlXmDxe9T72nEpNun8\nJKItDUpjTXQYFs2EOwlRd+R8u1wAjGflYxVR7FeBG2hJfD9aN2GiWAiAfY4Kxwcw\nBCO+V5j8l6bv9UKlOFQfqHs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "avenga-random-service@avenga-random-269408.iam.gserviceaccount.com",
+  "client_id": "105976534631627116375",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/avenga-random-service%40avenga-random-269408.iam.gserviceaccount.com"
+}
