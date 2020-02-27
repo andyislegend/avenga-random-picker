@@ -12,6 +12,7 @@
 
     <properties>
         <java.version>13</java.version>
+        <google.sheets.api.version>v4-rev607-1.25.0</google.sheets.api.version>
     </properties>
 
     <parent>
@@ -29,6 +30,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-sheets</artifactId>
+            <version>${google.sheets.api.version}</version>
         </dependency>
 
         <dependency>
