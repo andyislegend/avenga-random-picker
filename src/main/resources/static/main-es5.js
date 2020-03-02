@@ -772,7 +772,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.link = "";
         this.results = [];
         this.regex = new RegExp(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi);
-        this.randomEngine = new random_js__WEBPACK_IMPORTED_MODULE_3__["Random"](random_js__WEBPACK_IMPORTED_MODULE_3__["MersenneTwister19937"].seed(947570572));
+        this.randomEngine = new random_js__WEBPACK_IMPORTED_MODULE_3__["Random"](random_js__WEBPACK_IMPORTED_MODULE_3__["MersenneTwister19937"].autoSeed());
         this.isAuthorized = false;
         this.column = 'B';
         this.row = '2';
